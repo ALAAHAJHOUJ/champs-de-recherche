@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+    body
+    {
+    height: 100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: pink;
+    }  
+
+    #pere
+    {
+    width:200px;
+    height: 50px;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: 1s;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    }
+
+    input
+    {
+    width:98%;
+    height: 98%;
+    border:none;
+    outline: none;
+    }
+
+    #fils
+    {
+    height: 100%;
+    width: 50px;
+    background-color: red;
+    border: none;
+    outline: none;
+    right: 0px;
+    top:0px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property:all;
+    transition-duration: 1s;
+    cursor:pointer;
+    font-size: 20px;
+    color:white;
+    }
+
+
+
+    </style>
+</head>
+<body>
+<div id="pere">
+ <input type="text" placeholder="type text" id="inp">
+ <div id="fils" onclick="changer()"><i class='bx bx-search'></i></div>
+</div>
+
+<script>
+let pere=document.getElementById("pere");
+let fils=document.getElementById("fils");
+let input=document.getElementById("inp");
+
+
+function changer()
+{
+if(window.getComputedStyle(pere).width=="200px")
+{
+pere.style.width="50px";
+pere.style.borderRadius="50%";
+fils.style.borderRadius="50%";
+fils.style.color="black";
+fils.style.background="white";
+}else
+{
+pere.style.width="200px";
+fils.style.borderRadius="0px";
+pere.style.borderRadius="50%";
+fils.style.color="white";
+fils.style.background="red";
+}
+}
+</script>
+</body>
+</html>
